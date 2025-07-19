@@ -20,8 +20,8 @@ const modalDate = document.getElementById('modalDate');
 const modalExplanation = document.getElementById('modalExplanation');
 const closeButton = document.querySelector('.close-button');
 
-// NASA APOD API endpoint (using demo key for educational purposes)
-const NASA_API_KEY = 'DEMO_KEY';
+// NASA APOD API endpoint (using your personal API key)
+const NASA_API_KEY = 'MvNnjBzxl7LSmOhSR2pdrhu8x1DAIpUzb3Nvu0FO';
 const NASA_API_URL = 'https://api.nasa.gov/planetary/apod';
 
 // Add click event listener to the button
@@ -108,12 +108,12 @@ function displayGallery(imageData) {
   // Clear the gallery
   gallery.innerHTML = '';
   
-  // Check if we have any images
+ // Check if we have any images or videos
   if (!imageData || imageData.length === 0) {
     gallery.innerHTML = `
       <div class="placeholder">
         <div class="placeholder-icon">🔭</div>
-        <p>No images found for the selected date range.</p>
+        <p>No content found for the selected date range.</p>
       </div>
     `;
     return;
